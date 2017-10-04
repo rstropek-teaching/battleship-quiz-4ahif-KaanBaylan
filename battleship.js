@@ -37,6 +37,8 @@ $(() => {
 
     exit = true;
     check = [true, true, true, true, true];
+    // Consider choosing a different variable name. `exit` sound like true -> exit.
+    // However, you loop exits if exit becomes false. E.g. `continue` would be a better name.
     while (exit) {
       posR = Math.floor(Math.random() * 10);
       posC = Math.floor(Math.random() * 10);
@@ -45,6 +47,7 @@ $(() => {
 
       index       = selectShip(check);
       shiplength  = ships[index];
+      // Avoid multiple blank lines. This is considered bad coding style.
 
 
       switch(drct){
